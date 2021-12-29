@@ -244,6 +244,9 @@
 
 @media screen and (max-width: 480px) {
 
+    .body {
+        font-size: 100%;
+    }
 
     .imagesmall{
         left: 59px;
@@ -255,54 +258,67 @@
     }
 
     .top {
-        position: absolute;
-        border: 3px solid #000000;
-        left: 50%;
-        margin-left: -0px;
-        width: 440px;
-        top: 4%;
-        margin-top: 3px;
-        background: #000000;
-        animation-duration: 1s;
-        animation-name: LineDrawingRight;
+        margin-left: -170px;
+        width: 340px;
     }
     
     .left {
-        position: absolute;
-        border: 3px solid #000000;
-        left: 50%;
-        margin-left: -220px;
-        top: 5%;
-        height: 93%;
-        background: #000000;
-        animation-duration: 1s;
-        animation-name: LineDrawingDown;
+        margin-left: -170px;
     }
     
     .bottom {
-        position: absolute;
-        border: 3px solid #000000;
-        left: 50%;
-        margin-left: -220px;
-        width: 440px;
-        top: 98%;
-        margin-top: 3px;
-        background: #000000;
-        animation-duration: 1s;
-        animation-name: LineDrawingLeft;
+        margin-left: -170px;
+        width: 340px;
     }
     
     .right {
-        position: absolute;
-        border: 3px solid #000000;
-        left: 50%;
-        margin-left: 220px;
-        top: 5%;
-        height: 93%;
-        background: #000000;
-        animation-duration: 1s;
-        animation-name: LineDrawingUp;
+        margin-left: 170px;
+
     }
+
+    @keyframes LineDrawingRight{
+    from{
+        left:50%; margin-left:-170px; 
+        width:0px; top:4%; margin-top:3px; 
+    }
+
+    to{
+        left:50%; margin-left:-170px; 
+        width:340px; top:4%; margin-top:3px; 
+    }
+}
+@keyframes LineDrawingDown{
+    from{
+        left:50%; margin-left:-170px; 
+        top:5%;  height:0%; 
+    }
+    to{
+        left:50%; margin-left:-170px; 
+        top:5%;  height:93%; 
+    }
+}
+@keyframes LineDrawingUp{
+    from{
+        left:50%; margin-left:170px;
+        top:98%; height:0%; 
+
+    }
+    to{
+        left:50%; margin-left:170px;
+        top:5%; height:93%; 
+    }
+}
+
+@keyframes LineDrawingLeft{
+    from{
+        left:50%; margin-left:170px; width:0px; 
+        top:98%; margin-top:3px; 
+    }
+    to{
+        left:50%; margin-left:-170px; width:340px; 
+        top:98%; margin-top:3px; 
+    }
+}
     
 }
 
