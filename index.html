@@ -2,128 +2,21 @@
 <html>
 <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
 
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="style.css" rel="stylesheet">
     <title>whoismypresident?</title>
-    <style>
-        a {
-            text-decoration: none;
-            color: black;
-        }
-
-        a:visited {
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: none;
-        }
-
-        a:focus {
-            text-decoration: none;
-        }
-
-        a:hover,
-        a:active {
-            text-decoration: none;
-        }
-
-        body {
-            background-color: rgb(85, 141, 136);
-            font-size: 130%;
-            text-align: center;
-        }
-
-        h1 {
-            color: blue;
-        }
-
-        p {
-            color: rgb(0, 0, 0);
-        }
-
-        a {
-            text-decoration-line: none;
-        }
-
-        b {
-            animation-duration: 1s;
-            animation-name: shaking;
-            animation-iteration-count: infinite;
-        }
-
-        div {
-            text-align: center;
-        }
-
-        div div {
-            position: relative;
-            text-align: center;
-        }
-
-        div div span:nth-child(1) {
-            position: absolute;
-            border: 3px solid #000000;
-            left: 50%;
-            margin-left: -220px;
-            width: 440px;
-            top: 4%;
-            margin-top: 3px;
-            background: #000000;
-            animation-duration: 1s;
-            animation-name: LineDrawingRight;
-        }
-
-        div div span:nth-child(2) {
-            position: absolute;
-            border: 3px solid #000000;
-            left: 50%;
-            margin-left: -220px;
-            top: 5%;
-            height: 93%;
-            background: #000000;
-            animation-duration: 1s;
-            animation-name: LineDrawingDown;
-        }
-
-        div div span:nth-child(3) {
-            position: absolute;
-            border: 3px solid #000000;
-            left: 50%;
-            margin-left: -220px;
-            width: 440px;
-            top: 98%;
-            margin-top: 3px;
-            background: #000000;
-            animation-duration: 1s;
-            animation-name: LineDrawingLeft;
-        }
-
-        div div span:nth-child(4) {
-            position: absolute;
-            border: 3px solid #000000;
-            left: 50%;
-            margin-left: 220px;
-            top: 5%;
-            height: 93%;
-            background: #000000;
-            animation-duration: 1s;
-            animation-name: LineDrawingUp;
-        }
-    </style>
-    <script>
-
-    </script>
 
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, 
 maximum-scale=1.0, minimum-scale=1.0">
 
-<body>
+<body class="body">
     <div>
-        <div>
-            <span></span><span></span><span></span><span></span>
+        <div class="catch">
+            <span class="right"></span><span class="left"></span><span class="top"></span><span class="bottom"></span>
             <div class="jua">
                 <p style="text-align:center;font-size:100%;line-height: 40px;"><br></p>
                 <p style="text-align:center;font-size:120%;line-height: 0px;">제<font size="6">20</font>대 대통령 선거 도우미</p>
@@ -134,8 +27,8 @@ maximum-scale=1.0, minimum-scale=1.0">
 
                 <div style="text-align:center;">
                     <div class="in-down">
-                        <div style="position:relative; left: 75px;top:5px; line-height: 0px;">
-                            <img src="images/청와대.png" width="85" height="30">
+                        <div>
+                            <img class="imagesmall" src="images/청와대.png" width="85" height="30">
                         </div>
                     </div>
                 </div>
@@ -143,7 +36,7 @@ maximum-scale=1.0, minimum-scale=1.0">
                 <div style="position:relative; bottom:16px;">
 
                     <div class="fade-in-box">
-                        <p style="text-align:center;font-size:220%;line-height: 0px;">나에게 맞는 대통령은?</p>
+                        <p class="mypresident">나에게 맞는 대통령은?</p>
                         <p style="text-align:center;font-size:90%;line-height: 0px;">2분 만에 나의 대통령 알아보기!</p>
                         <br><br><br><br>
                     </div>
@@ -152,11 +45,11 @@ maximum-scale=1.0, minimum-scale=1.0">
 
 
                     <div class="in-down">
-                        <b>
+                        <b class="b">
                             <div class="back">
                                 <div class="button_base b09_electric">
                                     <p style="text-align:center;font-size:8%;line-height: 1px;"><br></p>
-                                    <a href="president2.html">클릭하세요!</a>
+                                    <a class="a" href="president2.html">클릭하세요!</a>
                                 </div>
                             </div>
                         </b>
