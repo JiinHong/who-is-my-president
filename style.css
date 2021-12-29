@@ -151,7 +151,7 @@
     from{
         position:absolute; 
         border: 3px solid #000000;
-        left:50%; margin-left:-250px; 
+        left:50%; margin-left:-220px; 
         width:0px; top:4%; margin-top:3px; 
         background:#000000;
     }
@@ -159,8 +159,8 @@
     to{
         position:absolute; 
         border: 3px solid #000000;
-        left:50%; margin-left:-250px; 
-        width:500px; top:4%; margin-top:3px; 
+        left:50%; margin-left:-220px; 
+        width:440px; top:4%; margin-top:3px; 
         background:#000000;
     }
 }
@@ -168,14 +168,14 @@
     from{
         position:absolute; 
         border: 3px solid #000000;
-        left:50%; margin-left:-250px; 
+        left:50%; margin-left:-220px; 
         top:5%;  height:0%; 
         background:#000000;
     }
     to{
         position:absolute; 
         border: 3px solid #000000;
-        left:50%; margin-left:-250px; 
+        left:50%; margin-left:-220px; 
         top:5%;  height:93%; 
         background:#000000;
     }
@@ -184,14 +184,14 @@
     from{
         position:absolute;
         border: 3px solid #000000;
-        left:50%; margin-left:250px;
+        left:50%; margin-left:220px;
         top:98%; height:0%; 
         background:#000000
     }
     to{
         position:absolute;
         border: 3px solid #000000;
-        left:50%; margin-left:250px;
+        left:50%; margin-left:220px;
         top:5%; height:93%; 
         background:#000000
     }
@@ -201,14 +201,14 @@
     from{
         position:absolute; 
         border: 3px solid #000000;
-        left:50%; margin-left:250.2px; width:0px; 
+        left:50%; margin-left:220px; width:0px; 
         top:98%; margin-top:3px; 
         background:#000000;
     }
     to{
         position:absolute; 
         border: 3px solid #000000;
-        left:50%; margin-left:-250px; width:500px; 
+        left:50%; margin-left:-220px; width:440px; 
         top:98%; margin-top:3px; 
         background:#000000;
     }
