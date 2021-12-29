@@ -16,18 +16,6 @@
   }
   
   
-  @media screen and (max-width: 1260px) {
-      .back {
-          width: 100%;
-      }
-  }
-  
-  @media screen and (max-width: 840px) {
-      .back {
-          width: 100%;
-      }
-  }
-  
   .button_base {
       margin: 0;
       border: 0;
@@ -242,6 +230,56 @@
     line-height: 0px;
 }
 
+.top {
+    position: absolute;
+    border: 3px solid #000000;
+    left: 50%;
+    margin-left: -220px;
+    width: 440px;
+    top: 4%;
+    margin-top: 3px;
+    background: #000000;
+    animation-duration: 1s;
+    animation-name: LineDrawingRight;
+}
+
+.left {
+    position: absolute;
+    border: 3px solid #000000;
+    left: 50%;
+    margin-left: -220px;
+    top: 5%;
+    height: 93%;
+    background: #000000;
+    animation-duration: 1s;
+    animation-name: LineDrawingDown;
+}
+
+.bottom {
+    position: absolute;
+    border: 3px solid #000000;
+    left: 50%;
+    margin-left: -220px;
+    width: 440px;
+    top: 98%;
+    margin-top: 3px;
+    background: #000000;
+    animation-duration: 1s;
+    animation-name: LineDrawingLeft;
+}
+
+.right {
+    position: absolute;
+    border: 3px solid #000000;
+    left: 50%;
+    margin-left: 220px;
+    top: 5%;
+    height: 93%;
+    background: #000000;
+    animation-duration: 1s;
+    animation-name: LineDrawingUp;
+}
+
 @media screen and (max-width: 480px) {
 
     .body {
@@ -258,22 +296,53 @@
     }
 
     .top {
+        position: absolute;
+        border: 3px solid #000000;
+        left: 50%;
         margin-left: -170px;
         width: 340px;
+        top: 4%;
+        margin-top: 3px;
+        background: #000000;
+        animation-duration: 1s;
+        animation-name: LineDrawingRight;
     }
     
     .left {
+        position: absolute;
+        border: 3px solid #000000;
+        left: 50%;
         margin-left: -170px;
+        top: 5%;
+        height: 93%;
+        background: #000000;
+        animation-duration: 1s;
+        animation-name: LineDrawingDown;
     }
     
     .bottom {
+        position: absolute;
+        border: 3px solid #000000;
+        left: 50%;
         margin-left: -170px;
         width: 340px;
+        top: 98%;
+        margin-top: 3px;
+        background: #000000;
+        animation-duration: 1s;
+        animation-name: LineDrawingLeft;
     }
     
     .right {
+        position: absolute;
+        border: 3px solid #000000;
+        left: 50%;
         margin-left: 170px;
-
+        top: 5%;
+        height: 93%;
+        background: #000000;
+        animation-duration: 1s;
+        animation-name: LineDrawingUp;
     }
 
     @keyframes LineDrawingRight{
@@ -368,54 +437,4 @@
 .catch{
     position: relative;
     text-align: center;
-}
-
-.top {
-    position: absolute;
-    border: 3px solid #000000;
-    left: 50%;
-    margin-left: -220px;
-    width: 440px;
-    top: 4%;
-    margin-top: 3px;
-    background: #000000;
-    animation-duration: 1s;
-    animation-name: LineDrawingRight;
-}
-
-.left {
-    position: absolute;
-    border: 3px solid #000000;
-    left: 50%;
-    margin-left: -220px;
-    top: 5%;
-    height: 93%;
-    background: #000000;
-    animation-duration: 1s;
-    animation-name: LineDrawingDown;
-}
-
-.bottom {
-    position: absolute;
-    border: 3px solid #000000;
-    left: 50%;
-    margin-left: -220px;
-    width: 440px;
-    top: 98%;
-    margin-top: 3px;
-    background: #000000;
-    animation-duration: 1s;
-    animation-name: LineDrawingLeft;
-}
-
-.right {
-    position: absolute;
-    border: 3px solid #000000;
-    left: 50%;
-    margin-left: 220px;
-    top: 5%;
-    height: 93%;
-    background: #000000;
-    animation-duration: 1s;
-    animation-name: LineDrawingUp;
 }
