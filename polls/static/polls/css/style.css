@@ -1,0 +1,463 @@
+
+@font-face {
+    font-family: "jua";
+    src: url('../fonts/BMJUA.otf');
+  }
+
+  .jua{
+    font-family: "jua";
+  }
+
+
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+  .preserve-3d {
+      transform-style: preserve-3d;
+      -webkit-transform-style: preserve-3d;
+  }
+
+
+  .button_base {
+      margin: 0;
+      border: 0;
+      font-size: 18px;
+      position: relative;
+      top: 70%;
+      left: 50%;
+      margin-top: -25px;
+      margin-left: -100px;
+      width: 200px;
+      height: 50px;
+      text-align: center;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-user-select: none;
+      cursor: default;
+  }
+
+  .button_base:hover {
+      cursor: pointer;
+  }
+
+/* ### ### ### 09 */
+.b09_electric {
+    color: #000000;
+    background-color:none;
+    border: #000000 solid 3px;
+    padding: 10px;
+    transition: all 0.1s ease;
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+}
+
+.b09_electric:hover {
+    color: #ffffff;
+    background-color: #000000;
+    animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    -webkit-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    -moz-animation: b09_electric_blinkIn 0.1s step-end 0 2;
+    transition: all 0.2s ease 0.2s;
+    -webkit-transition: all 0.2s ease 0.2s;
+    -moz-transition: all 0.2s ease 0.2s;
+}
+
+@-webkit-keyframes b09_electric_blinkIn {
+    from,
+    to {
+        background-color: #f8f8f8;
+        color: #000000;
+    }
+    50% {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+@-moz-keyframes b09_electric_blinkIn {
+    from,
+    to {
+        background-color: #f8f8f8;
+        color: #000000;
+    }
+    50% {
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+
+.fade-in-box {
+    display: inline-block;
+    animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
+    -o-animation: fadein 3s; /* Opera */
+  }
+
+  @-webkit-keyframes fadein { /* Safari and Chrome */
+      from {
+          opacity:0;
+      }
+      to {
+          opacity:1;
+      }
+  }
+
+
+
+@keyframes fadeInDown {
+    from {
+        opacity:0;
+        -webkit-transform: translatey(-10px);
+        -moz-transform: translatey(-10px);
+        -o-transform: translatey(-10px);
+        transform: translatey(-10px);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translatey(0);
+        -moz-transform: translatey(0);
+        -o-transform: translatey(0);
+        transform: translatey(0);
+    }
+}
+.in-down {
+    -webkit-animation-name: fadeInDown;
+    -moz-animation-name: fadeInDown;
+    -o-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+@keyframes LineDrawingRight{
+    from{
+        position:absolute;
+        border: 3px solid #000000;
+        left:50%; margin-left:-220px;
+        width:0px; top:4%; margin-top:3px;
+        background:#000000;
+    }
+
+    to{
+        position:absolute;
+        border: 3px solid #000000;
+        left:50%; margin-left:-220px;
+        width:440px; top:4%; margin-top:3px;
+        background:#000000;
+    }
+}
+@keyframes LineDrawingDown{
+    from{
+        position:absolute;
+        border: 3px solid #000000;
+        left:50%; margin-left:-220px;
+        top:5%;  height:0%;
+        background:#000000;
+    }
+    to{
+        position:absolute;
+        border: 3px solid #000000;
+        left:50%; margin-left:-220px;
+        top:5%;  height:93%;
+        background:#000000;
+    }
+}
+@keyframes LineDrawingUp{
+    from{
+        position:absolute;
+        border: 3px solid #000000;
+        left:50%; margin-left:220px;
+        top:98%; height:0%;
+        background:#000000
+    }
+    to{
+        position:absolute;
+        border: 3px solid #000000;
+        left:50%; margin-left:220px;
+        top:5%; height:93%;
+        background:#000000
+    }
+}
+
+@keyframes LineDrawingLeft{
+    from{
+        position:absolute;
+        border: 3px solid #000000;
+        left:50%; margin-left:220px; width:0px;
+        top:98%; margin-top:3px;
+        background:#000000;
+    }
+    to{
+        position:absolute;
+        border: 3px solid #000000;
+        left:50%; margin-left:-220px; width:440px;
+        top:98%; margin-top:3px;
+        background:#000000;
+    }
+}
+
+@keyframes shaking{
+    0%{
+        position:relative;
+        top:0px;
+    }
+    50%{
+        position:relative;
+        top:5px;
+    }
+    100%{
+        position: relative;
+        top:0px;
+    }
+}
+
+.mypresident{
+    text-align:center;
+    font-size:220%;
+    line-height: 0px;
+}
+
+.imagesmall{
+    position:relative;
+    left: 75px;
+    top:11px;
+    line-height: 0px;
+}
+
+.top {
+    position: absolute;
+    border: 3px solid #000000;
+    left: 50%;
+    margin-left: -220px;
+    width: 440px;
+    top: 4%;
+    margin-top: 3px;
+    background: #000000;
+    animation-duration: 1s;
+    animation-name: LineDrawingRight;
+}
+
+.left {
+    position: absolute;
+    border: 3px solid #000000;
+    left: 50%;
+    margin-left: -220px;
+    top: 5%;
+    height: 93%;
+    background: #000000;
+    animation-duration: 1s;
+    animation-name: LineDrawingDown;
+}
+
+.bottom {
+    position: absolute;
+    border: 3px solid #000000;
+    left: 50%;
+    margin-left: -220px;
+    width: 440px;
+    top: 98%;
+    margin-top: 3px;
+    background: #000000;
+    animation-duration: 1s;
+    animation-name: LineDrawingLeft;
+}
+
+.right {
+    position: absolute;
+    border: 3px solid #000000;
+    left: 50%;
+    margin-left: 220px;
+    top: 5%;
+    height: 93%;
+    background: #000000;
+    animation-duration: 1s;
+    animation-name: LineDrawingUp;
+}
+
+@media screen and (max-width: 480px) {
+
+    .body {
+        font-size: 100%;
+    }
+
+    .imagesmall{
+
+
+    }
+
+    .mypresident{
+        font-size:170%;
+    }
+
+    .top {
+        position: absolute;
+        border: 3px solid #000000;
+        left: 50%;
+        margin-left: -170px;
+        width: 340px;
+        top: 4%;
+        margin-top: 3px;
+        background: #000000;
+        animation-duration: 1s;
+        animation-name: LineDrawingRight;
+    }
+
+    .left {
+        position: absolute;
+        border: 3px solid #000000;
+        left: 50%;
+        margin-left: -170px;
+        top: 5%;
+        height: 93%;
+        background: #000000;
+        animation-duration: 1s;
+        animation-name: LineDrawingDown;
+    }
+
+    .bottom {
+        position: absolute;
+        border: 3px solid #000000;
+        left: 50%;
+        margin-left: -170px;
+        width: 340px;
+        top: 98%;
+        margin-top: 3px;
+        background: #000000;
+        animation-duration: 1s;
+        animation-name: LineDrawingLeft;
+    }
+
+    .right {
+        position: absolute;
+        border: 3px solid #000000;
+        left: 50%;
+        margin-left: 170px;
+        top: 5%;
+        height: 93%;
+        background: #000000;
+        animation-duration: 1s;
+        animation-name: LineDrawingUp;
+    }
+
+    @keyframes LineDrawingRight{
+    from{
+        left:50%; margin-left:-170px;
+        width:0px; top:4%; margin-top:3px;
+    }
+
+    to{
+        left:50%; margin-left:-170px;
+        width:340px; top:4%; margin-top:3px;
+    }
+}
+@keyframes LineDrawingDown{
+    from{
+        left:50%; margin-left:-170px;
+        top:5%;  height:0%;
+    }
+    to{
+        left:50%; margin-left:-170px;
+        top:5%;  height:93%;
+    }
+}
+@keyframes LineDrawingUp{
+    from{
+        left:50%; margin-left:170px;
+        top:98%; height:0%;
+
+    }
+    to{
+        left:50%; margin-left:170px;
+        top:5%; height:93%;
+    }
+}
+
+@keyframes LineDrawingLeft{
+    from{
+        left:50%; margin-left:170px; width:0px;
+        top:98%; margin-top:3px;
+    }
+    to{
+        left:50%; margin-left:-170px; width:340px;
+        top:98%; margin-top:3px;
+    }
+}
+
+}
+
+
+
+
+
+.a {
+    text-decoration: none;
+    color: black;
+}
+
+.a:visited {
+    text-decoration: none;
+}
+
+.a:hover {
+    text-decoration: none;
+}
+
+.a:focus {
+    text-decoration: none;
+}
+
+.a:hover,
+.a:active {
+    text-decoration: none;
+}
+
+.body {
+    background-color: rgb(85, 141, 136);
+    font-size: 130%;
+    text-align: center;
+}
+
+.a {
+    text-decoration-line: none;
+}
+
+.b {
+    animation-duration: 1s;
+    animation-name: shaking;
+    animation-iteration-count: infinite;
+}
+
+
+.catch{
+    position: relative;
+    text-align: center;
+}
+
+.bounce {
+    position: relative;
+    text-align: center;
+    animation: bounce 0.5s 0s infinite alternate ease forwards;
+
+
+}
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+ul {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}

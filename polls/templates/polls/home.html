@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+
+<style>
+
+.bounce {
+    position: relative;
+    text-align: center;
+    animation: bounce 0.5s 0s infinite alternate ease forwards;
+
+
+}
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'polls/css/style.css' %}" rel="stylesheet">
+    <title>whoismypresident?</title>
+
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,
+maximum-scale=1.0, minimum-scale=1.0">
+
+<body class="body">
+<div class="catch">
+    <div> <!--     position: relative; text-align: center; -->
+        <span class="right"></span> <!-- animation -->
+        <span class="left"></span>
+        <span class="top"></span>
+        <span class="bottom"></span>
+        <div class="jua"><!-- font jua -->
+            <div class="bounce">
+                <img src="{% static 'polls/images/presidenthouse.png' %}" style="padding-top: 50px;" width="200">
+            </div>
+            <p style="text-align:center;font-size:100%;line-height: 0px;">제20대 대통령 선거 도우미</p>
+            <div class="fade-in-box">
+                <p style="text-align:center;font-size:100%;line-height: 45px;"><br></p>
+                <p style="text-align:center;font-size:100%;line-height: 0%;">정치를 잘 모르는 당신을 위한..</p>
+            </div>
+
+            <div style="text-align:center;">
+
+            </div>
+
+            <div style="position:relative; bottom:16px;">
+
+                <div class="fade-in-box"> <!-- display: inline-block; -->
+                    <p class="mypresident">나에게 맞는 대통령은?</p>
+                    <p style="text-align:center; font-size:80%; line-height: 0px; font-style: italic; font-weight: 100; padding-bottom: 80px; ">2분 만에 나의 대통령 알아보기!</p>
+                </div>
+
+                <p style="text-align:center;font-size:100%;line-height: 0px;"><br></p>
+
+
+                <div class="in-down">
+                    <b class="b">
+                        <div class="back">
+                            <div class="button_base b09_electric">
+                                <p style="text-align:center;font-size:8%;line-height: 1px;"><br></p>
+                                <a class="a" href="{% url 'polls:detail' 1 %}">클릭하세요!</a>
+                            </div>
+                        </div>
+                    </b>
+                </div>
+                <div class="fade-in-box"> <!-- display: inline-block; -->
+                    <p style="text-align:center;font-size:50%;line-height: 10px;"><br></p>
+                    <img src="{% static 'polls/images/vote.png' %}" style="display: block; margin: 0 auto; width:70px; height:70px;">
+                    <p style="font-style: italic; font-weight: lighter;">Nut's</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

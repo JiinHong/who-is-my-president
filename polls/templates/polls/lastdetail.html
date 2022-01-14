@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+<style>
+.game-options-container{
+    padding-left: 35%;
+    width: 30%;
+    height: 8rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+
+}
+span label{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-weight: 600;
+    color: rgb(22, 22, 22);
+}
+
+span label:hover{
+    -ms-transform: scale(1.12);
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12);
+    color: blue;
+}
+
+  input[type="radio"] {
+    position: relative;
+
+}
+.game-options-container span{
+    width: 35%;
+    height: 3rem;
+    border: 2px solid darkgray;
+    border-radius: 20px;
+    overflow: hidden;
+}
+input[type=radio]:checked ~ .option {
+	background: paleturquoise;
+}
+
+input[type=submit] {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'polls/css/style.css' %}" rel="stylesheet">
+    <title>lastdetail</title>
+
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,
+maximum-scale=1.0, minimum-scale=1.0">
+
+<body class="body">
+<div class="jua">
+    <div class="catch">
+        <span class="right"></span>
+        <span class="left"></span>
+        <span class="top"></span>
+        <span class="bottom"></span>
+        <form action="{% url 'polls:result' question.id %}" method="post">
+            {% csrf_token %}
+            <legend><h1 style="padding-top: 35px;">{{ question.question_text }}</h1></legend>
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+            <div class="game-options-container" style="padding-top: 30px">
+            {% for choice in question.choice_set.all %}
+                 <span>
+                <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
+                <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+                </span>
+            {% endfor %}
+            </div>
+            <div style="position:relative; padding-top:5%;"></div>
+            <input  type="submit" value="vote">
+        </form>
+
+
+        <div style="position:relative; padding-top:5%;"></div>
+
+
+        <div class="fade-in-box">
+            <p style="text-align:center;font-size:50%;line-height: 10px;"><br></p>
+            <img src="{% static 'polls/images/vote.png' %}"
+                 style="display: block; margin: 0 auto; width:100px; height:100px; padding-top: 20px; padding-bottom: 40px;">
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>

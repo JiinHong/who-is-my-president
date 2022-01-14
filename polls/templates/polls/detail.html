@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+<style>
+
+.word {
+    position: relative;
+    left:0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top: 50px;
+    width: 300px;
+    word-wrap: break-word;
+    text-align:justify
+
+}
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+.option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 13.33333px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  transition: all 0.15s ease-out 0s;
+  background: #cbd1d8;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+}
+.option-input:hover {
+  background: #9faab7;
+}
+.option-input:checked {
+  background: #40e0d0;
+}
+.option-input:checked::before {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 40px;
+}
+.option-input:checked::after {
+  -webkit-animation: click-wave 0.65s;
+  -moz-animation: click-wave 0.65s;
+  animation: click-wave 0.65s;
+  background: #40e0d0;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+.option-input.radio {
+  border-radius: 50%;
+}
+.option-input.radio::after {
+  border-radius: 50%;
+}
+
+
+.bounce {
+    position: relative;
+    text-align: center;
+    animation: bounce 0.5s 0s infinite alternate ease forwards;
+
+
+}
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-10px);
+    }
+}
+
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'polls/css/style.css' %}" rel="stylesheet">
+    <title>whoismypresident?</title>
+
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,
+maximum-scale=1.0, minimum-scale=1.0">
+
+<body class="body">
+<div class="jua">
+    <div class="catch">
+        <span class="right"></span>
+        <span class="left"></span>
+        <span class="top"></span>
+        <span class="bottom"></span>
+        <div class="bounce">
+                <img src="{% static 'polls/images/presidenthouse.png' %}" style="padding-top: 50px;"width="200">
+        </div>
+        <form style="margin-top: -50px; "action="{% url 'polls:vote' question.id %}" method="post">
+            {% csrf_token %}
+            <div class="word" style="text-align:center;"><p>{{ question.question_text|safe }}</p></div>
+            {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+            <div  style="padding-top: 30px">
+                {% for choice in question.choice_set.all %}
+                <label>
+                    <input type="radio" class="option-input radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}"/>
+                    {{ choice.choice_text|safe }}
+                </label><br>
+                {% endfor %}
+            </div>
+            <div style="position:relative; padding-top:5%;"></div>
+            <input type="submit" value="vote">
+        </form>
+
+
+
+
+        <!--<div class=qa>
+        {% for choice in question.choice_set.all %}
+        <label>
+        <input type="radio" class="option-input radio" name="choice" />
+        {{ choice.choice_text }}
+        </label>
+        {% endfor %}
+        </div> -->
+
+
+        <div style="position:relative; padding-top:5%;"></div>
+
+
+        <div class="fade-in-box">
+            <p style="text-align:center;font-size:50%;line-height: 10px;"><br></p>
+            <img src="{% static 'polls/images/vote.png' %}"
+                 style="display: block; margin: 0 auto; width:100px; height:100px; padding-top: 20px; padding-bottom: 40px;">
+        </div>
+
+    </div>
+</div>
+</body>
+
+</html>
