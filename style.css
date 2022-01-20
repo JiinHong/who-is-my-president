@@ -51,7 +51,7 @@
 }
 
 .b09_electric:hover {
-    color: #ffffff;
+    color: rgb(85, 141, 136);
     background-color: #000000;
     animation: b09_electric_blinkIn 0.1s step-end 0 2;
     -webkit-animation: b09_electric_blinkIn 0.1s step-end 0 2;
