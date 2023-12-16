@@ -4,4 +4,4 @@
 보다 구체적인 프로젝트에 대한 설명을 보고싶다면   
 -> (https://github.com/JiinHong/django-who-is-my-president)  
 
-<img src="img.png" alt="시작 페이지" width="250" height="400">
+<img src="img.png" alt="시작 페이지" width="240" height="400">
